@@ -12,7 +12,7 @@ that is just using their API. Use at your own risk.
 Login to get a Bearer token which has to be passed for each subsequent request
 
 ```elixir
-{:ok, %{"token" => token}} = Exkontist.Client.login(username, passwor)
+{:ok, %{"token" => token}} = Exkontist.Client.login(username, password)
 ```
 
 ## Get a User 
