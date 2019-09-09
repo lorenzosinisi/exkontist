@@ -2,6 +2,11 @@
 
 **Client for Kontist APIs**
 
+## NOTE 
+
+Nothing in this repo is provided or linked to http://kontist.com, this is an independent repository
+that is just using their API. Use at your own risk.
+
 ## Login
 
 Login to get a Bearer token which has to be passed for each subsequent request
