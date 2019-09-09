@@ -1,6 +1,58 @@
-# Exkontist
+# Exkontist - And Elixir client for Kontist API
 
-**TODO: Add description**
+**Client for Kontist APIs**
+
+## Login
+
+Login to get a Bearer token which has to be passed for each subsequent request
+
+```elixir
+{:ok, %{"token" => token}} = Exkontist.Client.login(username, passwor)
+```
+
+## Get a User 
+
+Return a user and its settings
+
+```elixir
+Exkontist.Client.user(token)
+```
+
+## Get all bank accounts 
+
+```elixir
+Exkontist.Client.accounts(token)
+```
+
+## Get all transactions from one bank account 
+
+```elixir
+Exkontist.Client.account_transactions(account_id, token)
+```
+
+## Get all future transactions from one bank account 
+
+```elixir
+Exkontist.Client.future_transactions(account_id, token)
+```
+
+## Get all standing orders from one bank account 
+
+```elixir
+Exkontist.Client.standing_orders(account_id, token)
+```
+
+## Get all wire transfer suggestions from one bank account 
+
+```elixir
+Exkontist.Client.wire_transfer_suggestions(account_id, token)
+```
+
+## Get your monthly statement 
+
+```elixir
+Exkontist.Client.statement(year, month, token)
+```
 
 ## Installation
 
@@ -14,6 +66,11 @@ def deps do
   ]
 end
 ```
+
+**TODO**
+
+- implement post requests of the https://github.com/netnexus/IKontist/blob/master/src/kontist-client.ts
+- write tests
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
